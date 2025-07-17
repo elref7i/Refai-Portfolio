@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Header } from "@/components/header";
-import { Hero } from "@/components/hero";
+import { Hero } from "@/components/hero/hero";
 import { About } from "@/components/about";
 import { ContentCreator } from "@/components/content-creator";
 import { SeriesPlaylists } from "@/components/series-playlists";

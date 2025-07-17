@@ -47,12 +47,6 @@ export function Header() {
     { name: "Contact", href: "#contact" },
   ];
 
-  const socialLinks = [
-    { icon: Youtube, href: "#", label: "YouTube" },
-    { icon: MessageCircle, href: "#", label: "Telegram" },
-    { icon: Phone, href: "#", label: "WhatsApp" },
-  ];
-
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -91,7 +85,7 @@ export function Header() {
 
           <div className="flex items-center space-x-4">
             {/* Social Links - Desktop */}
-            <div className="hidden md:flex items-center space-x-2">
+            {/* <div className="hidden md:flex items-center space-x-2">
               {socialLinks.map((social) => (
                 <Button
                   key={social.label}
@@ -109,7 +103,7 @@ export function Header() {
                   </a>
                 </Button>
               ))}
-            </div>
+            </div> */}
 
             {/* Theme Toggle */}
             {mounted && (
@@ -143,36 +137,17 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col space-y-4 pt-4">
+          <nav className="lg:hidden mt-4 pb-4 border-t border-border  dark:bg-zinc-900 bg-opacity-50 ">
+            <div className="flex flex-col space-y-4 pt-4 ">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-foreground/80 hover:text-foreground transition-colors py-2"
+                  className="text-center text-foreground/80 hover:text-foreground font-bold transition-colors py-2"
                 >
                   {item.name}
                 </button>
               ))}
-              <div className="flex items-center space-x-4 pt-4">
-                {socialLinks.map((social) => (
-                  <Button
-                    key={social.label}
-                    variant="ghost"
-                    size="icon"
-                    asChild
-                  >
-                    <a
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={social.label}
-                    >
-                      <social.icon className="h-4 w-4" />
-                    </a>
-                  </Button>
-                ))}
-              </div>
             </div>
           </nav>
         )}
