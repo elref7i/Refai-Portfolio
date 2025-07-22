@@ -12,7 +12,6 @@ import {
   Brain,
   Code,
   Zap,
-  Trophy,
   Layers,
 } from "lucide-react";
 import { gsap } from "gsap";
@@ -70,7 +69,6 @@ export function SeriesPlaylists() {
       icon: Layers,
       status: "active",
       episodes: "12 Videos",
-      // duration: "6+ Hours",
       level: "Beginner",
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-500/10",
@@ -83,7 +81,6 @@ export function SeriesPlaylists() {
       icon: Zap,
       status: "active",
       episodes: "5+ Videos",
-      // duration: "10+ Hours",
       level: "Advanced",
       color: "from-yellow-500 to-orange-500",
       bgColor: "bg-yellow-500/10",
@@ -97,7 +94,6 @@ export function SeriesPlaylists() {
       icon: Code,
       status: "coming-soon",
       episodes: "Coming Soon",
-      duration: "TBA",
       level: "Intermediate",
       color: "from-red-500 to-rose-500",
       bgColor: "bg-red-500/10",
@@ -132,13 +128,13 @@ export function SeriesPlaylists() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {playlists.map((playlist, index) => (
+          {playlists.map((playlist) => (
             <Card
               key={playlist.title}
               className={`playlist-card group relative overflow-hidden border-2 hover:border-primary/30 transition-all duration-300 ${playlist.bgColor}`}
             >
               {/* Status Badge */}
-              <div className="absolute top-4 right-4 z-10">
+              <div className="absolute top-4 right-4 ">
                 <Badge
                   variant={
                     playlist.status === "active" ? "default" : "secondary"
@@ -153,7 +149,7 @@ export function SeriesPlaylists() {
                 </Badge>
               </div>
 
-              <CardHeader className="relative">
+              <CardHeader className="relative ">
                 <div
                   className={`w-16 h-16 rounded-full bg-gradient-to-r ${playlist.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                 >
@@ -175,27 +171,11 @@ export function SeriesPlaylists() {
                       <Play className="h-4 w-4 text-primary" />
                       {playlist.episodes}
                     </span>
-                    <span className="flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-primary" />
-                      {playlist.duration}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <Badge
-                      variant="outline"
-                      className="text-xs"
-                    >
-                      {playlist.level}
-                    </Badge>
-                    <span className="flex items-center gap-2 text-muted-foreground">
-                      <Users className="h-4 w-4" />
-                      For Developers
-                    </span>
                   </div>
                 </div>
 
                 <Button
-                  className={`w-full bg-gradient-to-r ${playlist.color} hover:opacity-90 transition-opacity group-hover:scale-105 transform duration-200`}
+                  className={`w-full  bg-gradient-to-r ${playlist.color} hover:opacity-90 transition-opacity group-hover:scale-105 transform duration-200 z-10`}
                   disabled={playlist.status === "coming-soon"}
                   asChild={playlist.status === "active"}
                 >
@@ -216,11 +196,6 @@ export function SeriesPlaylists() {
                   )}
                 </Button>
               </CardContent>
-
-              {/* Gradient overlay */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${playlist.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
-              />
             </Card>
           ))}
         </div>

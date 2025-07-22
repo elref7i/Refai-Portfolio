@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import { gsap } from "gsap";
-import Image from "next/image";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

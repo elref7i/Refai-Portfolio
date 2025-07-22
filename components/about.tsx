@@ -2,14 +2,7 @@
 
 import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  MapPin,
-  GraduationCap,
-  Calendar,
-  Code,
-  Youtube,
-  Users,
-} from "lucide-react";
+import { MapPin, GraduationCap, Calendar, Code, Youtube } from "lucide-react";
 import { gsap } from "gsap";
 
 export function About() {

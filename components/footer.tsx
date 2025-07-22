@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Youtube,
-  MessageCircle,
-  Phone,
-} from "lucide-react";
+import { Github, Linkedin, Mail, Youtube, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
