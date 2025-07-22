@@ -39,7 +39,6 @@ export function About() {
       value: "React & Next.js Expert",
     },
     { icon: Youtube, label: "Content Creator", value: "Educational Videos" },
-    { icon: Users, label: "Community Builder", value: "Developer Mentor" },
   ];
 
   return (
@@ -85,7 +84,7 @@ export function About() {
               </div>
               <div className="flex items-center space-x-3">
                 <Calendar className="h-5 w-5 text-blue-500" />
-                <span>Expected Graduation: June 2025</span>
+                <span>Graduation: June 2025</span>
               </div>
             </div>
           </div>
@@ -128,7 +127,8 @@ export function About() {
                   Menoufia University, Egypt
                 </p>
                 <p className="text-sm">
-                  Relevant Courses: Algorithms, OOP, DBMS, Software Engineering
+                  Relevant Courses: Algorithms, OOP,Data Structure, Software
+                  Engineering
                 </p>
               </CardContent>
             </Card>

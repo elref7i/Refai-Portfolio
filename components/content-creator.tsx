@@ -48,12 +48,12 @@ export function ContentCreator() {
       value: "Growing Fast",
       color: "text-blue-500",
     },
-    {
-      icon: Play,
-      label: "Video Series",
-      value: "Multiple Playlists",
-      color: "text-green-500",
-    },
+    // {
+    //   icon: Play,
+    //   label: "Video Series",
+    //   value: "Multiple Playlists",
+    //   color: "text-green-500",
+    // },
   ];
 
   const communityLinks = [
@@ -61,23 +61,23 @@ export function ContentCreator() {
       icon: Youtube,
       label: "YouTube Channel",
       description: "Educational programming content & tutorials",
-      href: "#",
+      href: "https://youtube.com/@el_refai?si=vJZlzs6LJj52tQsw",
       color: "bg-red-500 hover:bg-red-600",
     },
     {
       icon: MessageCircle,
       label: "Telegram Community",
       description: "Join our developer community discussions",
-      href: "#",
+      href: "https://t.me/Elrefai_Front_end",
       color: "bg-blue-500 hover:bg-blue-600",
     },
-    {
-      icon: Phone,
-      label: "WhatsApp Group",
-      description: "Quick updates and community support",
-      href: "#",
-      color: "bg-green-500 hover:bg-green-600",
-    },
+    // {
+    //   icon: Phone,
+    //   label: "WhatsApp Group",
+    //   description: "Quick updates and community support",
+    //   href: "#",
+    //   color: "bg-green-500 hover:bg-green-600",
+    // },
   ];
 
   return (
@@ -107,8 +107,8 @@ export function ContentCreator() {
         </div>
 
         {/* Stats */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {stats.map((stat, index) => (
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          {stats.map((stat) => (
             <Card
               key={stat.label}
               className="content-card text-center hover:shadow-lg transition-all duration-300"
@@ -123,8 +123,8 @@ export function ContentCreator() {
         </div>
 
         {/* Community Links */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {communityLinks.map((link, index) => (
+        <div className="grid md:grid-cols-2 gap-6 ">
+          {communityLinks.map((link) => (
             <Card
               key={link.label}
               className="content-card group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/20"
@@ -155,36 +155,6 @@ export function ContentCreator() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16 fade-in">
-          <Card className="max-w-2xl mx-auto bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 border-2 border-primary/20">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">
-                Ready to Learn Together?
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Join thousands of developers in our community. Get access to
-                exclusive content, participate in discussions, and accelerate
-                your programming journey.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-red-500 to-purple-500 hover:from-red-600 hover:to-purple-600"
-                >
-                  Subscribe to YouTube
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                >
-                  Join Community
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

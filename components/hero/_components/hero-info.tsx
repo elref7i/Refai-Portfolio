@@ -70,10 +70,10 @@ export default function HeroInfo() {
       {/* Profile Image */}
       <div className="flex-1 flex justify-center lg:justify-end">
         <div className="relative">
-          <div className="hero-image w-fit h-70 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 p-1 shadow-2xl">
+          <div className="hero-image size-[300px] md:size-[500px] lg:size-[400px] rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 p-1 shadow-2xl">
             <div className="w-full h-full  rounded-full overflow-hidden bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-cyan-500/10 flex items-center justify-center">
               <Image
-                src="/logo-stand.jpg"
+                src="/me.jpg"
                 alt="Ahmed Refai"
                 width={500}
                 height={500}
@@ -84,14 +84,14 @@ export default function HeroInfo() {
           </div>
 
           {/* Tech stack floating badges */}
-          <div className="absolute -top-4 -right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium floating-1">
+          <div className="absolute -top-4 right-0 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium floating-1">
             React
           </div>
           <div className="absolute -bottom-4 -left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium floating-2">
             Next.js
           </div>
           <div className="absolute top-1/2 -left-8 bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium floating-1">
-            YouTube
+            YouTuber
           </div>
         </div>
       </div>

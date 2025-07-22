@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 export default function AnimateHero() {
   useEffect(() => {
@@ -74,8 +75,26 @@ export default function AnimateHero() {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-cyan-500/5" />
       {/* Geometric shapes */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full floating-1" />
-      <div className="absolute bottom-20 right-10 w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full floating-2" />
+      <div className="absolute overflow-hidden top-24 left-10 w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full floating-1">
+        <Image
+          src="/AR.png"
+          alt=""
+          width={128}
+          className="w-full h-full object-cover"
+          objectFit="contain"
+          height={128}
+        />
+      </div>
+      <div className="absolute overflow-hidden bottom-20 right-10 w-12 h-12 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full floating-2">
+        <Image
+          src="/AR.png"
+          alt=""
+          width={128}
+          className="w-full h-full object-cover"
+          objectFit="contain"
+          height={128}
+        />
+      </div>
       <div className="absolute top-1/2 left-5 w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rotate-45 floating-1" />
     </>
   );

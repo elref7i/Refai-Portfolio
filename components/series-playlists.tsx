@@ -56,12 +56,12 @@ export function SeriesPlaylists() {
         "Comprehensive ML tutorials covering algorithms, implementation, and real-world applications",
       icon: Brain,
       status: "active",
-      episodes: "15+ Videos",
-      duration: "8+ Hours",
+      episodes: "12 Videos",
+      // duration: "8+ Hours",
       level: "Intermediate",
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-500/10",
-      href: "#",
+      href: "https://www.youtube.com/watch?v=fFP4_Wl2J88&list=PLkPKsQteEU7cAm3TO5y-_4aG7gFQ_n196",
     },
     {
       title: "My Note App Series",
@@ -69,12 +69,12 @@ export function SeriesPlaylists() {
         "Build a complete note-taking application from scratch using modern web technologies",
       icon: Layers,
       status: "active",
-      episodes: "12+ Videos",
-      duration: "6+ Hours",
+      episodes: "12 Videos",
+      // duration: "6+ Hours",
       level: "Beginner",
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-500/10",
-      href: "#",
+      href: "https://www.youtube.com/watch?v=KXxBYJOdkZk&list=PLkPKsQteEU7eXJVsoury4dUJZhe_8BAfN",
     },
     {
       title: "Trick JS",
@@ -82,26 +82,14 @@ export function SeriesPlaylists() {
         "JavaScript tips, tricks, and advanced concepts to level up your programming skills",
       icon: Zap,
       status: "active",
-      episodes: "20+ Videos",
-      duration: "10+ Hours",
+      episodes: "5+ Videos",
+      // duration: "10+ Hours",
       level: "Advanced",
       color: "from-yellow-500 to-orange-500",
       bgColor: "bg-yellow-500/10",
       href: "#",
     },
-    {
-      title: "LeetCode Series",
-      description:
-        "Solve coding interview problems step by step with detailed explanations",
-      icon: Trophy,
-      status: "coming-soon",
-      episodes: "Coming Soon",
-      duration: "TBA",
-      level: "All Levels",
-      color: "from-green-500 to-emerald-500",
-      bgColor: "bg-green-500/10",
-      href: "#",
-    },
+
     {
       title: "Quick JS Flow",
       description:
@@ -250,7 +238,14 @@ export function SeriesPlaylists() {
                 size="lg"
                 className="bg-gradient-to-r from-red-500 to-purple-500 hover:from-red-600 hover:to-purple-600"
               >
-                Subscribe Now
+                <a
+                  href="https://www.youtube.com/@El_Refai?sub_confirmation=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Subscribe to YouTube
+                </a>
+
                 <ExternalLink className="h-4 w-4 ml-2" />
               </Button>
             </CardContent>

@@ -2,17 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Moon,
-  Sun,
-  Menu,
-  X,
-  Youtube,
-  MessageCircle,
-  Phone,
-} from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -65,8 +58,10 @@ export function Header() {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
-            EL REFAI
+          <div className="flex gap-3 items-center justify-center">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+              EL REFAI
+            </h1>
           </div>
 
           {/* Desktop Navigation */}

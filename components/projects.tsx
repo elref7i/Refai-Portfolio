@@ -9,44 +9,109 @@ import { ExternalLink, Github } from "lucide-react";
 export function Projects() {
   const projects = [
     {
+      title: "Flower App",
+      description:
+        "Discover the beauty of nature at your fingertips with our Flower App. Whether you're a seasoned botanist or just someone who appreciates the elegance of flowers, this app is your ultimate companion.",
+      technologies: [
+        "Next.js",
+        "Zod",
+        "Next auth",
+        "Next-intel(i18n)",
+        "Shadcn-ui",
+        "React Query",
+        "React-hook-form",
+        "TypeScript",
+        "Tailwindcss",
+      ],
+      type: "Modern E-commerce Platform",
+      code: "https://github.com/elref7i/flower-app",
+      demo: "https://github.com/elref7i/flower-app",
+    },
+    {
       title: "P-Flow",
       description:
         "Comprehensive pharmacy and inventory management system streamlining inventory reconciliation by 20%",
-      technologies: ["React.js", "Firebase", "MUI"],
-      type: "Private Project",
-      impact: "20% improvement in inventory reconciliation",
-    },
-    {
-      title: "Fresh-Cart",
-      description:
-        "Responsive e-commerce platform providing seamless online shopping experience",
-      technologies: ["React.js", "Tailwind CSS"],
+      technologies: [
+        "vite",
+        "React.js",
+        "Firebase",
+        "MUI",
+        "Axios",
+        "Formik",
+        "Yup",
+        "React Query",
+        "react-infinite-scroll-component",
+        "use-debounce",
+        "react-hot-toast",
+        "leaflet",
+      ],
       type: "E-commerce Platform",
-      impact: "25% increase in user engagement",
+      code: "https://github.com/elref7i/p-flow",
+      demo: "https://p-flow.pages.dev",
     },
     {
       title: "Online Exam",
       description:
         "Authenticated online exam system supporting over 100 concurrent users with 99% uptime",
-      technologies: ["Next.js", "Tailwind CSS"],
+      technologies: [
+        "Next.js",
+        "Zod",
+        "Next auth",
+        "Next-intel(i18n)",
+        "Shadcn-ui",
+        "React Query",
+        "React-hook-form",
+        "TypeScript",
+        "Tailwindcss",
+      ],
       type: "Educational Platform",
-      impact: "99% uptime, 100+ concurrent users",
+      code: "https://github.com/elref7i/online-exam-app",
+      demo: "https://online-exam-app-psi.vercel.app",
+    },
+    {
+      title: "Fresh-Cart",
+      description:
+        "Responsive e-commerce platform providing seamless online shopping experience",
+      technologies: [
+        "Vite",
+        "React.js",
+        "Tailwind CSS",
+        "React Query",
+        "React-router-dom",
+        "Axios",
+        "Formik",
+        "Yup",
+      ],
+      type: "E-commerce Platform",
+      code: "https://github.com/elref7i/E-commerce",
+      demo: "https://e-commerce-flame-eight-54.vercel.app",
     },
     {
       title: "My Note",
       description:
         "User-friendly notes manager with dark mode functionality leading to 30% increase in user retention",
-      technologies: ["React.js", "Tailwind CSS"],
+      technologies: [
+        "Vite",
+        "React.js",
+        "Tailwind CSS",
+        "React Query",
+        "React-router-dom",
+        "Axios",
+        "Formik",
+        "Yup",
+      ],
       type: "Productivity App",
-      impact: "30% increase in user retention",
+      code: "https://github.com/elref7i/my-note-app",
+      demo: "https://my-note-app-pink.vercel.app/",
     },
     {
       title: "Yummy",
       description:
         "Meal discovery application providing seamless browsing experience for over 5,000 recipes",
-      technologies: ["JavaScript", "jQuery", "Bootstrap"],
+      technologies: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"],
       type: "Recipe Discovery",
-      impact: "40% improvement in user experience, 5,000+ recipes",
+      code: "https://github.com/elref7i/Yummy",
+      demo: "https://yummy-blush-one.vercel.app/",
     },
   ];
 
@@ -123,12 +188,6 @@ export function Projects() {
                     ))}
                   </div>
 
-                  <div className="bg-muted/50 p-3 rounded-lg">
-                    <p className="text-sm font-medium text-green-600 dark:text-green-400">
-                      Impact: {project.impact}
-                    </p>
-                  </div>
-
                   <div className="flex space-x-2 pt-2">
                     <Button
                       variant="outline"
@@ -137,7 +196,7 @@ export function Projects() {
                       asChild
                     >
                       <a
-                        href="https://github.com/elref7i"
+                        href={project.code}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -152,13 +211,9 @@ export function Projects() {
                       asChild
                     >
                       <a
-                        href="#contact"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          document
-                            .querySelector("#contact")
-                            ?.scrollIntoView({ behavior: "smooth" });
-                        }}
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Demo

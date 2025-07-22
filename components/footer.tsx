@@ -23,9 +23,16 @@ export function Footer() {
       href: "mailto:ahmed.khaled.refai.b@gmail.com",
       label: "Email",
     },
-    { icon: Youtube, href: "#", label: "YouTube" },
-    { icon: MessageCircle, href: "#", label: "Telegram" },
-    { icon: Phone, href: "#", label: "WhatsApp" },
+    {
+      icon: Youtube,
+      href: "https://youtube.com/@el_refai?si=zH0FV-I25RUBppn9",
+      label: "YouTube",
+    },
+    {
+      icon: MessageCircle,
+      href: "https://t.me/Elrefai_Front_end",
+      label: "Telegram",
+    },
   ];
 
   return (
